@@ -209,7 +209,7 @@ function Get-PSDContent{
     elseif ($global:psddsDeployRoot -like "\\*"){
         Write-PSDLog -Message "$($MyInvocation.MyCommand.Name): global:psddsDeployRoot is now $global:psddsDeployRoot"
         Write-PSDLog -Message "$($MyInvocation.MyCommand.Name): Running Get-PSDContentUNC -content $content -destination $dest"
-        Get-PSDContentUNC -content $content -destination $dest
+        Get-PSDContentUNC -content $content -destination $dest | out-null
     }
     else{
         Write-PSDLog -Message "$($MyInvocation.MyCommand.Name): Path for $content is already local, not copying again"
