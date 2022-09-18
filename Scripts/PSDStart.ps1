@@ -76,7 +76,7 @@ if(Test-Path -Path "C:\MININT\PSDDebug.txt"){
     $Global:PSDDebug = $True
 }
 
-if($Global:PSDDebug -eq $false){
+<#if($Global:PSDDebug -eq $false){
     if($DeBug -eq $true){
         $Result = Read-Host -Prompt "Press y and Enter to continue in debug mode, any other key to exit from debug..."
         if($Result -eq "y"){
@@ -85,7 +85,7 @@ if($Global:PSDDebug -eq $false){
             $DeBug = $False
         }
     }
-}
+}#>
 
 if($DeBug -eq $true){
     $Global:PSDDebug = $True
